@@ -1,0 +1,20 @@
+<launch>
+  <param
+    name="/degree"
+    type="double"
+    value="90"
+  />
+
+  <node
+    pkg="deg2rad_pkg"
+    type="get_deg.py"
+    name="degree_pub"
+  />
+
+  <node
+    pkg="deg2rad_pkg"
+    type="deg2rad.py"
+    name="convert_radian_sub"
+    output="screen"
+  />
+</launch>
